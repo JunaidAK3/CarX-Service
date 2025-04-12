@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Pricing</title>
+        <link rel="stylesheet" href="../css/pricing.css">
+    </head>
+    <body>
+       <!-- Navbar -->
+       <header class="navbar">
+        <div class="logo">CarX Services</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav id="mobile-menu" class="mobile-nav">
+            <ul>
+                <li>
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li>
+                    <a href="pricing.html" class="nav-link active">Pricing</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li> 
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+        <header1>
+            <h1>Choose Your Plan</h1>
+            <p>Flexible services with best value</p>
+        </header1>
+        <section class="pricing-section">
+            <div class="pricing-grid">
+                <div class="card">
+                    <h3>Quick Wash</h3>
+                    <p class="price">PKR 500</p>
+                    <ul class="features">
+                        <li>Exterior Wash</li>
+                        <li>Dry & Shine</li>
+                        <li>15 Minute Service</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>Standard Wash</h3>
+                    <p class="price">PKR 800</p>
+                    <ul class="features">
+                        <li>Body Wash + Vacuum</li>
+                        <li>Tire Clean</li>
+                        <li>Interior Dust Removal</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>Deluxe Package</h3>
+                    <p class="price">PKR 1200</p>
+                    <ul class="features">
+                        <li>Wax & Polish</li>
+                        <li>Full Interior Detail</li>
+                        <li>AC Vent Clean</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>Deep Clean</h3>
+                    <p class="price">PKR 1500</p>
+                    <ul class="features">
+                        <li>Engine Clean</li>
+                        <li>Underbody Wash</li>
+                        <li>Full Detailing</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>AC Treatment</h3>
+                    <p class="price">PKR 1000</p>
+                    <ul class="features">
+                        <li>AC Disinfection</li>
+                        <li>Filter Check</li>
+                        <li>Fresh Fragrance</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>Paint Protection</h3>
+                    <p class="price">PKR 2000</p>
+                    <ul class="features">
+                        <li>Ceramic Coating</li>
+                        <li>Scratch Resistant</li>
+                        <li>UV Guard</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+                <div class="card">
+                    <h3>Interior Detail</h3>
+                    <p class="price">PKR 1800</p>
+                    <ul class="features">
+                        <li>Seats Shampoo</li>
+                        <li>Leather Polish</li>
+                        <li>Odor Elimination</li>
+                    </ul>
+                    <a href="#" class="btn">Select</a>
+                </div>
+            </div>
+      </section>
+      <script>
+          const toggle = document.getElementById('menu-toggle');
+          const menu = document.getElementById('mobile-menu');
+          const links = document.querySelectorAll('.nav-link');
+                          toggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            toggle.innerHTML = menu.classList.contains('show') ? '&#10006;' : '&#9776;';
+          });
+                   // Active link highlight and close menu
+          links.forEach(link => {
+            link.addEventListener('click', (e) => {
+              links.forEach(l => l.classList.remove('active'));
+              e.target.classList.add('active');
+                            // Close menu on mobile
+              menu.classList.remove('show');
+              toggle.innerHTML = '&#9776;';
+            });
+          });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="../css/about.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="logo">CarX Services</div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <nav id="mobile-menu" class="mobile-nav">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="nav-link" class="nav-link">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li> 
+                        <a href="about.html" class="nav-link active">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header Section -->
+        <header class="about-header">
+            <h1>About Us</h1>
+            <p>We provide the best car washing and services in the city, enhancing your driving experience.</p>
+        </header>
+        <!-- About Content Section -->
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At our company, we aim to provide high-quality car washing services that go beyond just a simple wash. Our focus is on customer satisfaction, eco-friendly practices, and offering a range of services that suit every need.</p>
+                    <p>With a team of experts, we ensure every vehicle gets the best treatment, leaving it clean, fresh, and shining like new. Whether it’s a quick wash or a complete detailing service, we,re here to meet your car’s needs with precision and care.</p>
+                </div>
+                <div class="about-image">
+                    <img src="../image/ourmission.jpg" alt="Our Team">
+                </div>
+            </div>
+        </div>
+        <!-- Team Section -->
+        <div class="container">
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-cards">
+                    <div class="team-card">
+                        <img src="../image/junaid.jpg" alt="Team Member">
+                        <h3>Junaid Ali Khan</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="../image/junaid.jpg" alt="Team Member">
+                        <h3>Junaid Ali Khan</h3>
+                        <p>Operations Manager</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="../image/junaid.jpg" alt="Team Member">
+                        <h3>Junaid Ali Khan</h3>
+                        <p>Car Detailing Specialist</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="../image/junaid.jpg" alt="Team Member">
+                        <h3>Junaid Ali Khan</h3>
+                        <p>Customer Relations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.nav-link');
+          
+            toggle.addEventListener('click', () => {
+              menu.classList.toggle('show');
+              toggle.innerHTML = menu.classList.contains('show') ? '&#10006;' : '&#9776;';
+            });
+          
+            // Active link highlight and close menu
+            links.forEach(link => {
+              link.addEventListener('click', (e) => {
+                links.forEach(l => l.classList.remove('active'));
+                e.target.classList.add('active');
+          
+                // Close menu on mobile
+                menu.classList.remove('show');
+                toggle.innerHTML = '&#9776;';
+              });
+            });
+        </script>
+    </body>
+</html>

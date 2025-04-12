@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link rel="stylesheet" href="../css/services.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">CarX Services</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="mobile-menu" class="mobile-nav">
+      <ul>
+        <li>
+            <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li>
+            <a href="services.html" class="nav-link active">Services</a>
+        </li>
+        <li>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+        </li>
+        <li>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+        <li>
+            <a href="about.html" class="nav-link">About</a>
+        </li>
+    </ul>
+    </nav>
+</header>
+  
+  <div class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">We provide a wide range of professional car services</p>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="glass-card">
+          <i class="fas fa-car"></i>
+          <h3>Exterior Wash</h3>
+          <p>Thorough cleaning of the car's exterior using premium products.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card">
+          <i class="fas fa-soap"></i>
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning and conditioning of all interior surfaces.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card">
+          <i class="fas fa-spray-can"></i>
+          <h3>Wax & Polish</h3>
+          <p>Enhance shine and protect your vehicle’s paint with waxing services.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card">
+          <i class="fas fa-tools"></i>
+          <h3>Engine Cleaning</h3>
+          <p>Professional cleaning of your engine bay for better performance.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="glass-card">
+          <i class="fas fa-wrench"></i>
+          <h3>Car Service</h3>
+          <p>From oil changes to full inspections, we service all vehicle types.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="glass-card">
+          <i class="fas fa-wind"></i>
+          <h3>AC Repair</h3>
+          <p>We fix and recharge your car’s air conditioning systems.</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="glass-card">
+          <i class="fas fa-gas-pump"></i>
+          <h3>Fuel System Check</h3>
+          <p>Inspection and cleaning of your fuel system for better mileage.</p>
+        </div>
+
+      </div>
+    
+   
+</div>
+  </section>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.nav-link');
+  
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      toggle.innerHTML = menu.classList.contains('show') ? '&#10006;' : '&#9776;';
+    });
+  
+    // Active link highlight and close menu
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        links.forEach(l => l.classList.remove('active'));
+        e.target.classList.add('active');
+  
+        // Close menu on mobile
+        menu.classList.remove('show');
+        toggle.innerHTML = '&#9776;';
+      });
+    });
+        </script>
+
+</body>
+</html>
